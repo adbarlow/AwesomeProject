@@ -55,15 +55,17 @@ export default class AwesomeProject extends Component {
 		CodePush.sync({
 			updateDialog: true,
 			installMode: CodePush.installMode.IMMEDIATE
-		}, (status) => {
-			for (var key in CodePush.SyncStatus) {
-				if (status === CodePush.SyncStatus[key]){
-					this.setState(preState => ({ logs: [...preState.logs, key.replace(/_/g, ' ')] }));
-					break;
-				}
-			}
-	});
-}
+		});
+	}
+	// 	, (status) => {
+	// 		for (var key in CodePush.SyncStatus) {
+	// 			if (status === CodePush.SyncStatus[key]){
+	// 				this.setState(preState => ({ logs: [...preState.logs, key.replace(/_/g, ' ')] }));
+	// 				break;
+	// 			}
+	// 		}
+	// });
+
 
 constructor(props){
 	super(props);
@@ -75,6 +77,7 @@ constructor(props){
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
+		<Text style={styles.codepush}>Added with Code Push</Text>
 		<Button title="Send Event" onPress={()=> this.sendEvent()}/>
 		<Button title="Native Crash" onPress={() => this.nativeCrash()}/>
 		<Button title="JS Crash" onPress={() => this.jsCrash()}/>
@@ -86,6 +89,10 @@ constructor(props){
 }
 
 const styles = StyleSheet.create({
+	codepush: {
+		fontSize: 25,
+		textAlign: 'center'
+	},
   container: {
     flex: 1,
     justifyContent: 'center',
