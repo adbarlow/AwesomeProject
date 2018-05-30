@@ -7,8 +7,16 @@
     "test": "jest"
   },
   "dependencies": {
+    "appcenter": "^1.5.1",
+    "appcenter-analytics": "^1.5.1",
+    "appcenter-crashes": "^1.5.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react-native": "^3.2.1",
     "react": "16.3.1",
-    "react-native": "0.55.4"
+    "react-native": "0.55.4",
+    "react-native-code-push": "^5.3.4",
+    "socks": "^2.2.0",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",
@@ -18,5 +26,10 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "Test App Center and React Native",
+  "main": "index.js",
+  "repository": "https://github.com/adbarlow/AwesomeProject.git",
+  "author": "Adam Barlow <dadambarlow@gmail.com>",
+  "license": "MIT"
 }
